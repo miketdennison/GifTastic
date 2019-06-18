@@ -1,3 +1,21 @@
-body, html {
-    background: red;
+body {
+    background: gray;
+    position: relative;
+}
+#add-fail {
+    position: absolute;
+    float: left;
+    top: 16px;
+    right: 15%;
+    margin: 0 0 0 12px;
+}
+.float-left {
+    float: left;
+}
+
+.mr-12 {
+    padding: 0 12px 0 0;
+}
+#gifs-appear-here {
+    width: 70%;
 }
