@@ -1,6 +1,7 @@
 var topics = ["bike fail", "skateboard fail", "rollerblade fail", "twerk fail"];
 var queryURL = "https://api.giphy.com/v1/gifs/search";
 var numOfTopics = 0;
+var lastButtonClicked;
 
     populateButtons();
 
@@ -14,9 +15,9 @@ function populateButtons() {
     }
 }
 
-$(".gif-button").on("click", function () {
+$("#buttons-appear-here").on("click", ".gif-button", function () {
     var topic = $(this).text();
-    console.log("GIFBUTTON!");
+    lastButtonClicked = $(this);
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -36,7 +37,7 @@ $(".gif-button").on("click", function () {
             failGif.attr("data-still", data[i].images.fixed_height_still.url);
             failGif.attr("data-animated", data[i].images.fixed_height.url);
             failGif.addClass("gif");
-            gifDiv.prepend("<p>" + data[i].rating + "</p>");
+            gifDiv.prepend("<p>" + "Rating: " + data[i].rating.toUpperCase() + "</p>");
             gifDiv.append(failGif);
             $("#gifs-appear-here").append(gifDiv);
         }
@@ -61,4 +62,13 @@ $("#submit").on("click", function(e) {
     var fail = $("#fail-input").val().trim();
     topics.push(fail.toLowerCase());
     populateButtons();
+});
+
+
+$(document).ready(function () {
+    $("[href]").each(function () {
+        if (this.href == window.location.href) {
+            $(this).addClass("active");
+        }
+    });
 });

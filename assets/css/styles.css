@@ -1,5 +1,5 @@
 body {
-    background: gray;
+    background: #f9f9f9;
     position: relative;
 }
 #add-fail {
@@ -18,4 +18,22 @@ body {
 }
 #gifs-appear-here {
     width: 70%;
+}
+#input-text {
+    font-weight: bold;
+}
+
+.submissions {
+    margin: .5rem 0;
+}
+
+button,
+#submit {
+    background: #428bca;
+    color: #fff;
+    margin: 0 .5rem 0 0;
+}
+
+button:hover, #submit:hover {
+    opacity: .6;
 }
