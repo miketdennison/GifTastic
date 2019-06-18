@@ -2,7 +2,7 @@ var topics = ["bike fail", "skateboard fail", "rollerblade fail", "twerk fail"];
 var queryURL = "https://api.giphy.com/v1/gifs/search";
 var numOfTopics = 0;
 
-populateButtons();
+    populateButtons();
 
 function populateButtons() {
     var button;
@@ -48,8 +48,8 @@ $("#gifs-appear-here").on("click", ".gif", function () {
     var gif = $(this);
     var state = gif.attr("data-state");
     if (state === "still") {
-        $(this).attr("data-state", "animate");
-        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animated");
+        $(this).attr("src", $(this).attr("data-animated"));
     } else {
         $(this).attr("data-state", "still");
         $(this).attr("src", $(this).attr("data-still"));
