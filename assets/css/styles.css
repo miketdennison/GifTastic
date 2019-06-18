@@ -1,14 +1,37 @@
-body {
-    background: #f9f9f9;
+html {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-color: #cccccc;
+    background-size: cover;
+}
+
+.container {
     position: relative;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-weight: 400;
 }
-#add-fail {
-    position: absolute;
+
+#gifs-appear-here {
     float: left;
-    top: 16px;
-    right: 15%;
-    margin: 0 0 0 12px;
+    width: 60%;
 }
+
+#gifs-appear-here:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#input-text {
+    font-weight: bold;
+}
+
+#add-fail {
+    display: block;
+    position: absolute;
+    left: 65%;
+}
+
 .float-left {
     float: left;
 }
@@ -16,12 +39,10 @@ body {
 .mr-12 {
     padding: 0 12px 0 0;
 }
-#gifs-appear-here {
-    width: 70%;
-}
-#input-text {
-    font-weight: bold;
-}
+
+
+
+
 
 .submissions {
     margin: .5rem 0;
@@ -29,11 +50,27 @@ body {
 
 button,
 #submit {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-weight: 400;
+    font-size: 14px;
     background: #428bca;
-    color: #fff;
-    margin: 0 .5rem 0 0;
+    color: #000;
+    margin: 0 .25rem 0 0;
+    padding: .5rem;
 }
 
-button:hover, #submit:hover {
-    opacity: .6;
+button:hover,
+#submit:hover {
+    background-color: #004176;
+
+
 }
+
+button:focus {
+    background: #42afff;
+    color: #fff;
+    opacity: .6;
+    outline: none;
+}
+
