@@ -10,7 +10,7 @@ Live Link: https://miketdennison.github.io/GifTastic/index.html
 * HTML
 * CSS
 * JavaScript
-* [jQuery](https://jquery.com/)
+* jQuery
 * [Giphy API](https://developers.giphy.com/) - The API used
 
 ## Author(s)
